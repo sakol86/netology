@@ -6,14 +6,9 @@ services:
   ports: -5432:5432
   volumes: ./pgdata:/var/lib/postgresql/data/pgdata
   inviroment:
-    POSTGRES_PASSWORD: SokolovAV12!3!!
-    POSTGRES_DB: SokolovAV-db
-    PGDATA: /var/lib/postgresql/data/pgdata
-  networks:
-    netology-lesson-3:
-      ipv4 address: 172.19.0.2
-  restart: always
-
+  POSTGRES_PASSWORD: SokolovAV12!3!!
+  POSTGRES_DB: SokolovAV-db
+  PGDATA: /var/lib/postgresql/data/pgdata
   
 networks:
   SokolovAV-my-netology-hw:
@@ -21,4 +16,4 @@ driver: bridge
 ipam:
 config:
   - subnet: 172.22.0.0/24
-    
+    restart: always
