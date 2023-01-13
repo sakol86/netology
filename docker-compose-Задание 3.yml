@@ -1,0 +1,16 @@
+version: "3"
+services:
+ netology-db:
+  image: postgres:13
+  container_name: SokolovAV-netology-db
+  ports: -5432:5432
+  volumes: ./pgdata:/var/lib/postgresql/data/pgdata
+  inviroment:
+  POSTGRES_PASSWORD: 321
+  POSTGRES_DB:
+networks:
+  SokolovAV-my-netology-hw:
+driver: bridge
+ipam:
+config:
+  - subnet: 172.19.0.0/24

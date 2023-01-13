@@ -1,0 +1,8 @@
+version: "3"
+services:
+networks:
+  SokolovAV-my-netology-hw:
+driver: bridge
+ipam:
+config:
+  - subnet: 172.19.0.0/24
