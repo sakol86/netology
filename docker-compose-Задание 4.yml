@@ -1,19 +1,36 @@
 version: "3"
 services:
- netology-db:
-  image: postgres:13
-  container_name: SokolovAV-netology-db
-  ports: -5432:5432
-  volumes: ./pgdata:/var/lib/postgresql/data/pgdata
-  inviroment:
-  POSTGRES_PASSWORD: SokolovAV12!3!!
-  POSTGRES_DB: SokolovAV-db
-  PGDATA: /var/lib/postgresql/data/pgdata
-  
+  netology-db:
+      image: postgres:13
+      container_name: SokolovAV-netology-db
+      ports: 
+      - 5432:5432
+      volumes: 
+      -  ./pgdata:/var/lib/postgresql/data/pgdata
+      environment:
+        POSTGRES_PASSWORD: SokolovAV12!3!!
+        POSTGRES_DB: SokolovAV-db
+        PGDATA: /var/lib/postgresql/data/pgdata
+      networks:
+        netology-lesson:
+           ipv4_address: 172.19.0.2
+      restart: always
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: SokolovAV-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: SokolovAV@ilove-netology.com
+      PGADMIN_DEFAULT_PASSWORD: 321
+    ports:
+    - "61231:80"
+    networks:
+      netology-lesson:
+        ipv4_address: 172.19.0.3
+    restart: always
+    
 networks:
   SokolovAV-my-netology-hw:
-driver: bridge
-ipam:
-config:
-  - subnet: 172.22.0.0/24
-    restart: always
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.22.0.0/24
