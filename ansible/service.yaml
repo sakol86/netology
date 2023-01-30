@@ -1,0 +1,17 @@
+---
+- name: zabbix status
+  hosts: all
+  become: no
+  gather_facts: yes
+  tasks:
+    - name: "zabbix-agent facts"
+      service_facts:
+    - name: "See the service zabbix-agent facts as they are"
+      debug:
+        msg: "{{ansible_facts.services['zabbix-agent.service'].state}}"
+    - name: "Verify if zabbix-agent is running!"
+      assert:
+        that:
+          - "'{{ansible_facts.services['zabbix-agent.service'].state}}' == 'running'"
+        fail_msg: "zabbix-agent is down!"
+        success_msg: "Good to go"
