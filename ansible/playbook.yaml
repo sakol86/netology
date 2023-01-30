@@ -1,0 +1,13 @@
+---
+- name: "mc"
+  hosts: servers
+  become: true
+  become_user: root
+  
+
+  tasks:
+  - name: "Intsall mc"
+    shell: apt install -y mc
+    
+    
+    

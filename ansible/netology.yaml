@@ -1,0 +1,14 @@
+---
+- name: netology
+  hosts: all
+  become: true
+  become_user: root
+
+  vars:
+   sourse_file: /Users/sakol86/Documents/GitHub/netology/ansible/netology.txt
+   destin_file: /tmp/
+  
+  tasks:
+  - name: Copy netology
+    Copy: src={{sourse_file}} dest={{destin_file}} mode=600
+   

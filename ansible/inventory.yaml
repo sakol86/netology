@@ -1,0 +1,9 @@
+virtualmachines:
+  hosts:
+    vm01:
+      ansible_host: 172.16.142.130 
+    vm02:
+      ansible_host: 172.16.142.130 
+  vars:
+    ansible_user: sokolov
+    ansible_pass: 5652

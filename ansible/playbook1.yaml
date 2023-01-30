@@ -1,0 +1,11 @@
+---
+- name: test connection
+  hosts: all
+  become: true
+  become_user: root
+
+  tasks:
+
+  - name: ping my servers  
+    ping:
+  
