@@ -1,0 +1,14 @@
+---
+- name: "Tuned"
+  hosts: servers
+  become: yes
+  
+  
+
+  tasks:
+  - name: "Intsall tuned"
+    command: sudo apt install -y tuned tuned-utils tuned-utils-systemtap
+    
+    
+    
+    

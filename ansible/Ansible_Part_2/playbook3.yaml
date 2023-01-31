@@ -1,0 +1,16 @@
+---
+- hosts: "all"
+  become: yes
+  become_user: root
+  gather_facts: yes
+  vars:
+    mode: привет мир!
+  tasks:
+    - name: Change /etc/motd
+      copy:
+        content: "{{mode}}"
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: 0644
+  

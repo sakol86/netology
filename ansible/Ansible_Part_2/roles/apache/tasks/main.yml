@@ -1,0 +1,27 @@
+---
+# tasks file for apache2
+    - name: Install apache2
+      become: true
+      package:
+        name: apache2
+        state: present
+    - name: "Make index.html"
+      template:
+        src: templates/indexhtml.j2
+        dest: "/var/www/html/index.html"
+    
+
+
+    - name: Starting apache2
+      become: true
+      systemd:
+        name: apache2
+        enabled: true
+        masked: no
+    - name: Check that you can connect (GET) to a page and it returns a status 200
+      ansible.builtin.uri:
+        url: http://{{ ansible_default_ipv4.address }}
+
+    - name: Curl
+      command: "curl {{ ansible_facts.default_ipv4.address }}"
+  
