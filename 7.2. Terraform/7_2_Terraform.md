@@ -45,7 +45,7 @@ for Mac OS X. Install:
     brew install hashicorp/tap/terraform
     brew update
     
-    ![image](https://user-images.githubusercontent.com/86907205/216815954-a64ebea6-bc5c-4e28-b847-84bb9cbd3482.png)
+    ![image](https://user-images.githubusercontent.com/86907205/216815982-c5f232a6-9c51-45d9-8ac7-8813b046e2ff.png)
 
     https://disk.yandex.ru/i/OBTepKXArgwfiA
 
