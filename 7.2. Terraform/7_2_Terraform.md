@@ -44,6 +44,9 @@ for Mac OS X. Install:
     brew tap hashicorp/tap
     brew install hashicorp/tap/terraform
     brew update
+    
+    ![image](https://user-images.githubusercontent.com/86907205/216815954-a64ebea6-bc5c-4e28-b847-84bb9cbd3482.png)
+
     https://disk.yandex.ru/i/OBTepKXArgwfiA
 
 В связи с недоступностью ресурсов для загрузки Terraform на территории РФ, вы можете воспользоваться VPN или использовать зеркало YandexCloud.
