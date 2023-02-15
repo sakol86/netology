@@ -12,10 +12,16 @@
 
 Ответ:
 https://disk.yandex.ru/i/CdrHFZcpdvidjQ
+![image](https://user-images.githubusercontent.com/86907205/219005627-9a2fdde1-73ac-491d-b9a2-83c00520fbf7.png)
+
 
 https://disk.yandex.ru/i/69jY3eNAn9zwTQ
+![image](https://user-images.githubusercontent.com/86907205/219005720-11fde143-fec6-4f1f-beaf-f97133300894.png)
+
 
 https://disk.yandex.ru/i/SlqQ5rcvZ436Qw
+![image](https://user-images.githubusercontent.com/86907205/219005813-5fb62653-92c2-44d7-8061-bcf1dadead9c.png)
+
 
 Задание 2
 Что нужно сделать:
@@ -27,8 +33,11 @@ https://disk.yandex.ru/i/SlqQ5rcvZ436Qw
 Ответ:
 
 https://disk.yandex.ru/i/JjLjgxL1Fa1jaQ
+![image](https://user-images.githubusercontent.com/86907205/219005914-1e54d005-40f2-4064-8507-be41557f817a.png)
 
 https://disk.yandex.ru/i/7AthOxCpBu9JbQ
+![image](https://user-images.githubusercontent.com/86907205/219006050-79a80323-6988-4117-a9e3-59916e501317.png)
+
 
 Задание 3
 Что нужно сделать:
@@ -42,10 +51,15 @@ https://disk.yandex.ru/i/7AthOxCpBu9JbQ
 Ответ:
 
 https://disk.yandex.ru/i/31msOSW4k3hgKQ
+![image](https://user-images.githubusercontent.com/86907205/219006171-b84c5161-3f52-4584-ac3d-0d18504f0218.png)
 
 https://disk.yandex.ru/i/VPn30fZJEUo4kQ
+![image](https://user-images.githubusercontent.com/86907205/219006260-0276483a-6b07-4c46-95ce-ed0797ee5748.png)
+
 
 https://disk.yandex.ru/i/IDwaGfwWqZJRVQ
+![image](https://user-images.githubusercontent.com/86907205/219006332-57a9fcc2-b22a-4017-97af-b4a6033892a3.png)
+
 
 
 Дополнительные задания* (со звёздочкой)
