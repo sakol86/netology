@@ -54,11 +54,11 @@ sudo bconsole
 * message
 * exit
 ```
-[**Файл bacula-sd.conf**](https://github.com/StanislavBaranovskii/10-4-hw/blob/main/data/bacula-sd.conf)
+[**Файл bacula-sd.conf**](https://github.com/sakol86/netology/blob/ready/10.4%20«Резервное%20копирование»/10-4-hw/data_file/bacula-sd.conf)
 
-[**Файл bacula-fd.conf**](https://github.com/StanislavBaranovskii/10-4-hw/blob/main/data/bacula-fd.conf)
+[**Файл bacula-fd.conf**](https://github.com/sakol86/netology/blob/ready/10.4%20«Резервное%20копирование»/10-4-hw/data_file/bacula-fd.conf)
 
-[**Файл bacula-dir.conf**](https://github.com/StanislavBaranovskii/10-4-hw/blob/main/data/bacula-dir.conf)
+[**Файл bacula-dir.conf**](https://github.com/sakol86/netology/blob/ready/10.4%20«Резервное%20копирование»/10-4-hw/data_file/bacula-dir.conf)
 
 ---
 
@@ -84,7 +84,7 @@ sudo nano /etc/rsyncd.scrt
 sudo chmod 0600 /etc/rsyncd.scrt
 /root/scripts/backup-node1.sh 
 ```
-**Файл rsyncd.conf :**
+[**Файл rsyncd.conf :**] (https://github.com/sakol86/netology/blob/ready/10.4%20«Резервное%20копирование»/10-4-hw/data_file/rsyncd.conf)
 ```
 pid file = /var/run/rsyncd.pid
 log file = /var/log/rsyncd.log
@@ -100,7 +100,7 @@ comment = Data backup Dir
 auth users = backup
 secrets file = /etc/rsyncd.scrt
 ```
-[**Файл backup-node1.sh**](https://github.com/StanislavBaranovskii/10-4-hw/blob/main/data/backup-node1.sh)
+[**Файл backup-node1.sh**](https://github.com/sakol86/netology/blob/ready/10.4%20«Резервное%20копирование»/10-4-hw/data_file/backup-node1.sh)
 
 ---
 
