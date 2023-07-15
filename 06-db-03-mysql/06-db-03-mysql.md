@@ -13,7 +13,7 @@ docker volume create vol_mysql
 docker image tag mysql:8.0 nt_mysql
 docker run --rm --name nt_mysql -e MYSQL_ROOT_PASSWORD=mysql -ti -p 3308:3306 -v vol_mysql:/etc/mysql/ -d mysql:8.0
 ```
-Изучите [бэкап БД](https://github.com/netology-code/virt-homeworks/tree/master/06-db-03-mysql/test_data) и 
+Изучите [бэкап БД](https://github.com/sakol86/netology/tree/ready/06-db-03-mysql/test_data) и 
 восстановитесь из него.
 
 `Ответ:`
