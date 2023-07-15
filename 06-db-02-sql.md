@@ -14,7 +14,7 @@
 
 Приведите получившуюся команду или docker-compose-манифест.
 
-'Ответ':
+'`Ответ`':
 
 docker run -e POSTGRES_PASSWORD=postgres -e PGDATA=/var/lib/postgresql/data -p 5432:5432 -v /tmp/postgres/data:/var/lib/postgresql/data -v /tmp/postgres/backups:/var/lib/postgresql/backups -d postgres
 
@@ -48,7 +48,7 @@ docker run -e POSTGRES_PASSWORD=postgres -e PGDATA=/var/lib/postgresql/data -p 5
 - SQL-запрос для выдачи списка пользователей с правами над таблицами test_db;
 - список пользователей с правами над таблицами test_db.
 
-'Ответ':
+'`Ответ`':
 
 test_db=# \l
                                 <br> List of databases
@@ -155,7 +155,7 @@ WHERE  grantee not in ('postgres','PUBLIC');
 Используя SQL-синтаксис:
 - вычислите количество записей для каждой таблицы.
 
-'Ответ':
+'`Ответ`':
 
 INSERT INTO orders (наименование, цена) VALUES ('Шоколад',10),('Принтер',3000),('Книга',500),('Монитор',7000),('Гитара',4000);
 INSERT INTO clients ("фамилия", "страна проживания") VALUES ('Иванов Иван Иванович','USA'),('Петров Петр Петрович','Canada'),('Иоганн Себастьян Бах','Japan'),('Ронни Джеймс Дио','Russia'),('Ritchie Blackmore','Russia');
@@ -192,7 +192,7 @@ select count(*) from clients;
  
 Подсказка: используйте директиву `UPDATE`.
 
-'Ответ':
+'`Ответ`':
 
 update clients
 set заказ = orders.наименование
@@ -228,7 +228,7 @@ test_db=# select фамилия from clients where "заказ" is not null;
 
 Приведите получившийся результат и объясните, что значат полученные значения.
 
-'Ответ':
+'`Ответ`':
 
 <p>test_db=# explain select фамилия from clients where "заказ" is not null;
                         <p>QUERY PLAN<p>
@@ -250,7 +250,7 @@ test_db=# select фамилия from clients where "заказ" is not null;
 
 Приведите список операций, который вы применяли для бэкапа данных и восстановления. 
 
-'Ответ':
+'`Ответ`':
 
 pg_dump -U postgres test_db > /var/lib/postgresql/backups/test_db.sql
 <p>psql -U postgres test_db < /var/lib/postgresql/backups/test_db.sql
