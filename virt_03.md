@@ -32,7 +32,7 @@ Hey, Netology
 
 `Ответ:`
 
-https://hub.docker.com/repository/docker/sakol86/netology_hw/general
+https://hub.docker.com/repositories/sakol86
 
 ## Задача 2
 
