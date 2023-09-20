@@ -100,29 +100,33 @@ Gitlab-сервер для реализации CI/CD-процессов и пр
 `Ответ:`
 
 Запуск первого контейнера из образа centos:
-
+```
 docker run -d -v $(pwd)/data:/data --name container1 centos:<тег>
-
+```
 Здесь $(pwd)/data - это путь к папке data в текущей рабочей директории на хостовой машине.
 
 Запуск второго контейнера из образа debian:
-
+```
 docker run -d -v $(pwd)/data:/data --name container2 debian:<тег>
-
+```
 Подключение к первому контейнеру и создание текстового файла:
 
-`docker exec -it container1 sh
+```
+docker exec -it container1 sh
 touch /data/test.txt
-exit`
+exit
+```
 
 Добавление ещё одного файла в папку data на хостовой машине.
 
 Подключение ко второму контейнеру и отображение содержимого папки data:
 
-`docker exec -it container2 sh
+```
+docker exec -it container2 sh
 ls /data
 cat /data/test.txt
-exit`
+exit
+```
 
 ## Задача 4 (*)
 
