@@ -111,18 +111,18 @@ docker run -d -v $(pwd)/data:/data --name container2 debian:<тег>
 
 Подключение к первому контейнеру и создание текстового файла:
 
-```docker exec -it container1 sh
+`docker exec -it container1 sh
 touch /data/test.txt
-exit```
+exit`
 
 Добавление ещё одного файла в папку data на хостовой машине.
 
 Подключение ко второму контейнеру и отображение содержимого папки data:
 
-```docker exec -it container2 sh
+`docker exec -it container2 sh
 ls /data
 cat /data/test.txt
-exit```
+exit`
 
 ## Задача 4 (*)
 
