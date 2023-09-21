@@ -12,6 +12,8 @@
 
 `Ответ:`
 https://disk.yandex.ru/i/tLX3hFKO6WKS4w
+![image](https://github.com/sakol86/netology/assets/86907205/ec7731c3-56d5-4034-9679-c009b12d1cd9)
+
 
 ## Задача 2
 
@@ -20,6 +22,8 @@ https://disk.yandex.ru/i/tLX3hFKO6WKS4w
 `ответ:`
 
 https://disk.yandex.ru/i/uQC1Br9nZVAXPA
+![image](https://github.com/sakol86/netology/assets/86907205/e02e11cc-8a68-4780-9a9b-68a99cb7c914)
+
 
 **2.2.*** **(Необязательное задание)**      
 Создайте вашу первую виртуальную машину в YandexCloud с помощью Terraform (вместо использования веб-интерфейса YandexCloud).
@@ -54,6 +58,8 @@ e65c4e1d3777        10 minutes ago      Up 10 minutes       9100/tcp            
 `ответ:`
 
 https://disk.yandex.ru/i/2JedUfLp9y8C_A
+![image](https://github.com/sakol86/netology/assets/86907205/075a713f-3bc9-4840-90b0-0b530b442d9b)
+
 
 ## Задача 5 (*)
 
