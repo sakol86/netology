@@ -18,7 +18,7 @@
 
 2. Личную, секретную информацию можно сохранить в файле `personal.auto.tfvars`;
 3. Секретное содержимое созданного ресурса random_password `"result": "cVC8UNdUxio9uucz",`
-![random_password](img/ter-01_01.png)
+
 
 ```
   {
@@ -126,7 +126,7 @@ The terraform destroy command terminates resources managed by your Terraform pro
 Destroy the resources you created.
 ```
 
-### Доработка ДЗ
+### Дополнение
 
 В ответе на вопрос 1.7 неправильный скриншот, надеюсь подтянется верный.
 
@@ -142,55 +142,25 @@ If true, then the Docker image won't be deleted on destroy operation. If this is
 После изменения ключа `keep_locally = true` на `keep_locally = false` команда `terraform destroy` удалила и `docker container` и `docker image`.
 
 ```
-shaman@banner:~/Netology/github/ter-01-hw/src
-- length
-= 16
--> null
-- lower
-= true -> null
-- min_lower
-= 1 -> null
-- min_numeric = 1 -> null
-- min_special = 0 -> null
-- min_upper
-= 1 -> null
-- number
-= true -> null
-- numeric
-= true
--> null
-- result
-= (sensitive value)
-- special
-= false
-> null
-- upper
-= true -> null
--> null
-}
+
 Plan: 0 to add, o to change, 3 to destroy.
+
 Do you really want to destroy all resources?
-Terraform will destroy all your managed infrastructure, as shown above.
-There is no undo. Only 'yes' will be accepted to confirm.
-Enter a value: yes
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
 docker_container.nginx: Destroying. [id=d8a422d2bflfad4b66fc896f6f99cc1a09f256aaceaaa40b0d558dda60fc76d]
 _password. random_string: Destroying... [id=none]
-random_password. random_string: Destruction complete after Os docker_container.nginx: Destruction complete after 3s docker_
-_image.nginx: Destroying. [id=sha256:f5a6b296b8a29b4e3d89ffa99e4a86309874ae400e82b3d3993f84ele3bb0eb9nginx:latest]
-docker_image.nginx: Destruction complete after Os Destroy complete! Resources: 3 destroyed.
-Cs suan docker Netology/github/ter-01-h/src (maine,
-CONTAINER ID IMAGE
-COMMAND
-CREATED
-STATUS
-PORTS
-NAMES
-Cs suas docker images o/github/ter-02-hw/sre <maino,
-REPOSITORY
-TAG
-IMAGE ID
-CREATED
-Chamanebanner -/Netology/github/ter-0-h/src ‹maino
+random_password. random_string: Destruction complete after Os docker_container.nginx: Destruction complete after 3s
+docker_image.nginx: Destroying. [id=sha256:f5a6b296b8a29b4e3d89ffa99e4a86309874ae400e82b3d3993f84ele3bb0eb9nginx:latest]
+docker_image.nginx: Destruction complete after Os
+Destroy complete! Resources: 3 destroyed.
+sudo docker ps -a
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+sudo docker images 
+REPOSITORY TAG IMAGE ID CREATED
 ```
 
 
