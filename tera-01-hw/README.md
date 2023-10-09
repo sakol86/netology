@@ -63,7 +63,7 @@
 
 4. Первая ошибка говорит о том, что у чоздаваемого ресурса не указано угикальное имя, во-второй ошибке говорится, что уникальное имя содержит не допустимое значение (символ), третья ошибка - заменить 31 строку `name  = "example_${random_password.random_string_FAKE.resulT}"` на `name  = "example_${random_password.random_string.result}"`
 ```
-╭─shaman@banner ~/Netology/github/ter-01-hw/src ‹main●› 
+ 
 ╰─$ terraform validate
 ╷
 │ Error: Missing name for resource
