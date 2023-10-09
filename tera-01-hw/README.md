@@ -90,19 +90,64 @@
 │ This object has no argument, nested block, or exported attribute named "resulT". Did you mean "result"?
 ```
 
-![terraform_validate](img/ter-01_02.png)
+
 
 5. Вывод команды `docker ps`
+```
 
-![docker ps](img/ter-01_03.png)
+CONTAINER ID IMAGE        COMMAND                 CREATED        STATUS        PORTS                NAMES
+49bla7bdccdf eb4a57159180 "/docker-entrypoint..." 18 seconds ago Up 10 seconds 0.0.0.0:8000->80/tcp example_CVC8UNdUxio9uucz
+```
+
+
+
 
 6. Опасность применения ключа `-auto-approve`, по моему мнению, заключается в отсутствии проверки за внесением измнений TERRAFORM в создоваемую, или, что ещё хуже, в изменяемую инфроструктуру. Если в файле конфигурации есть ошибки и/или неточности они без проверки и исправлений будут выполнены и применены, что повлечёт за собой последствия. Вывод команды `docker ps`
 
-![docker ps](img/ter-01_04.png)
+```
+
+CONTAINER ID IMAGE         COMMAND                  CREATED        STATUS       PORTS                    NAMES
+c129b00b1815 eb4a57159180  "/docker-entrypoint....  6 seconds ago  Up 4 seconds 0.0.0.0:8000->80/tcp     hello_world
+```
+
 
 7. Выполнение комманды `terraform destroy`
+```
+#
+random_password, random string will be destroyed
+- resource "random password" "random string" {
+- bcrypt hash = (sensitive value) -> null
+- id = "none" -> null
+- length = 16 -> null
+- lower = true - null
+- min lower = 1 -> null
+- min numeric = 1 -> null
+- min special = 0 -> null
+- min upper = 1 -> null
+- number = true -> null
+- numeric = true -> null
+- result = (sensitive value) -> null
+- special = false -> null
+- upper = true -> null
+  
+Plan: 0 to add, 0 to change, 3 to destroy.
 
-![terraform destroy](img/ter-01_05.png)
+Do you really want to destroy all resources?
+Terraform will destroy all your managed infrastructure, as shown above.
+There is no undo. Only 'yes' will be accepted to confirm.
+
+Enter a value: yes
+
+docker_container.nginx: Destroying.. Tid=c129b00b18157ebd8ddff067a6818403ad4ablba62cfad0eadobb4a0abec7bca]
+random_password. random_string: Destroying.. fid=none)
+random_password. random_string: Destruction complete after Os 
+docker_container.nginx: Destruction complete after 2s 
+docker_image. nginx: Destroying. Tid=sha256: eb4a57159180767450c84266367611b999653d8f185b5e3b78a9ca30c2c31dnginx: Latest]
+docker_image.nginx: Destruction complete after 0s
+Destroy complete! Resources: 3 destroyed.
+```
+
+
 
 Содержание файла `terraform.tfstate`
 ```
@@ -126,41 +171,6 @@ The terraform destroy command terminates resources managed by your Terraform pro
 Destroy the resources you created.
 ```
 
-### Дополнение
 
-В ответе на вопрос 1.7 неправильный скриншот, надеюсь подтянется верный.
-
-Дополняю ответ на вопрос 1.8 после возврата ДЗ на доработку.
-Возможно terraform не стал удалять docker image из-за ключа `keep_locally = true`. Интернеты по данному вопросу говорят следующее:
-
-```
-keep_locally
-boolean
-If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
-```
-
-После изменения ключа `keep_locally = true` на `keep_locally = false` команда `terraform destroy` удалила и `docker container` и `docker image`.
-
-```
-
-Plan: 0 to add, o to change, 3 to destroy.
-
-Do you really want to destroy all resources?
-  Terraform will destroy all your managed infrastructure, as shown above.
-  There is no undo. Only 'yes' will be accepted to confirm.
-
-  Enter a value: yes
-
-docker_container.nginx: Destroying. [id=d8a422d2bflfad4b66fc896f6f99cc1a09f256aaceaaa40b0d558dda60fc76d]
-_password. random_string: Destroying... [id=none]
-random_password. random_string: Destruction complete after Os docker_container.nginx: Destruction complete after 3s
-docker_image.nginx: Destroying. [id=sha256:f5a6b296b8a29b4e3d89ffa99e4a86309874ae400e82b3d3993f84ele3bb0eb9nginx:latest]
-docker_image.nginx: Destruction complete after Os
-Destroy complete! Resources: 3 destroyed.
-sudo docker ps -a
-CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
-sudo docker images 
-REPOSITORY TAG IMAGE ID CREATED
-```
 
 
