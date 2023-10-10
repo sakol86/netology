@@ -170,7 +170,15 @@ The terraform destroy command terminates resources managed by your Terraform pro
 
 Destroy the resources you created.
 ```
+Доработка:
 
+terraform не стал удалять docker image из-за ключа keep_locally = true. в интернете по данному вопросу:
 
+```
+keep_locally
+boolean
+If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
+```
+После изменения ключа keep_locally = true на keep_locally = false команда terraform destroy удалила и docker container и docker image.
 
 
