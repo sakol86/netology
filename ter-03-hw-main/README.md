@@ -13,7 +13,7 @@
 
 ------
 
-## Ответ
+ `Ответ`
 
 Скриншот входящих правил «Группы безопасности» в ЛК Yandex Cloud
 
@@ -30,7 +30,7 @@
 
 ------
 
-## Ответ
+ `Ответ`
 
 Создание и запуск виртуальных машин с именами `netology-develop-platform-web-1` и `netology-develop-platform-web-2`
 
@@ -90,7 +90,7 @@ resource "yandex_compute_instance" "example_each" {
 
 ------
 
-## Ответ
+`Ответ`
 
 Содержание файла `disk_vm.tf`
 
@@ -159,8 +159,7 @@ resource "yandex_compute_instance" "storage" {
 **Удалите все созданные ресурсы**.
 
 ------
-
-## Ответ
+ `Ответ`
 
 
 Yndex.Cloud с IP-адресами
