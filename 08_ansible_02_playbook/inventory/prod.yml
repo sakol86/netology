@@ -1,0 +1,7 @@
+---
+elastic_kibana:
+  hosts:
+    ek:
+      ansible_host: 10.128.0.14
+      ansible_connection: ssh
+      ansible_user: user

@@ -1,0 +1,14 @@
+node("linux"){
+    stage("Git checkout"){
+        git credentialsId: 'cdae9af1-282c-41fc-94f7-a26c749ab4c7', url: 'git@github.com:chebyrek/08-ansible-02-playbook.git'
+    }
+    stage("Run playbook"){
+        if (params.prod_run){
+            sh 'ansible-playbook -i inventory/prod.yml site.yml'
+        }
+        else{
+            sh 'ansible-playbook -i inventory/prod.yml --check --diff site.yml'
+        }
+        
+    }
+}
